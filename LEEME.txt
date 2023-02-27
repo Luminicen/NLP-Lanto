@@ -1,0 +1,2 @@
+COSAS DE NTLK QUE HAY QUE INSTALAR (NO LAS INSTALA PIP)
+python -m textblob.download_corpora
