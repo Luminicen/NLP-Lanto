@@ -28,6 +28,7 @@ def format_topics_sentences(ldamodel,corpus):
     return sent_topics_df
 def identificarTopicos(doc_complete) :
     stop = set(stopwords.words('english'))
+    #stop = set(stopwords.words('spanish')) PARA ANALISAR TEXTO EN ESPAÑOL DESCOMENTAR ESTA Y COMENTAR LA DE ARRIBA
     exclude = set(string.punctuation)
     lemma = WordNetLemmatizer()
     doc_clean = [clean(doc,stop,exclude,lemma).split() for doc in doc_complete]
@@ -56,4 +57,25 @@ doc1 = "I am learning NLP, it is very interesting and exciting. it includes mach
 doc2 = "My father is a data scientist and he is nlp expert"
 doc3 = "My sister has good exposure into android development"
 doc_complete = [doc1, doc2, doc3]
+identificarTopicos(doc_complete)
+#ejemplo
+f1 = open('./Datos/Agricultura.txt',"r",encoding='utf-8')
+doc = f1.read()
+f1.close()
+f1 = open('./Datos/Tomato.txt',"r",encoding='utf-8')
+doc2 = f1.read()
+f1.close()
+f1 = open('./Datos/TomatoCherry.txt',"r",encoding='utf-8')
+doc3 = f1.read()
+f1.close()
+doc_complete = [doc,doc2,doc3]
+identificarTopicos(doc_complete)
+#español
+f1 = open('./Datos/Durazno_esp.txt',"r",encoding='utf-8')
+doc = f1.read()
+f1.close()
+f1 = open('./Datos/Tomate_esp.txt',"r",encoding='utf-8')
+doc2 = f1.read()
+f1.close()
+doc_complete = [doc,doc2]
 identificarTopicos(doc_complete)
