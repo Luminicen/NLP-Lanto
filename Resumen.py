@@ -7,6 +7,7 @@ from sumy.utils import get_stop_words
 from sumy.summarizers.luhn import LuhnSummarizer
 # Extracting and summarizing
 LANGUAGE = "english"
+#LANGUAGE = "spanish" DESCOMENTAR ESTA LINEA Y COMENTAR LA DE ARRIBA PARA SUMARIZAR TEXTO EN ESPAÑOL
 SENTENCES_COUNT = 10
 url="https://en.wikipedia.org/wiki/Natural_language_processing"
 parser = HtmlParser.from_url(url, Tokenizer(LANGUAGE))
