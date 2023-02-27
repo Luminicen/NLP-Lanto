@@ -30,3 +30,13 @@ tfidf_vectorizer = TfidfVectorizer()
 tfidf_matrix = tfidf_vectorizer.fit_transform(documentos)
 print("EJEMPLO 2")
 print(cosine_similarity(tfidf_matrix[0:1],tfidf_matrix))
+print("EJEMPLO EN ESPAÑOL")
+documentos = ["Me interesa aprender NLP",
+              "Estoy explorando NLP",
+              "Mi hermana conoce en profundidad algunos temas relacionados a NLP",
+              "NLP es imperativo para requerimientos",
+              "Necesito aprender NLP mas avanzado"
+              ]
+tfidf_vectorizer = TfidfVectorizer()
+tfidf_matrix = tfidf_vectorizer.fit_transform(documentos)
+print(cosine_similarity(tfidf_matrix[0:1],tfidf_matrix))
