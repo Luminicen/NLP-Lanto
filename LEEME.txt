@@ -1,8 +1,17 @@
-Primer Paso (Opcional): instalar virtualenv
-    1.pip install virtualenv
-    2.virtualenv <nombre entorno>
-    3.cd  <ruta del entorno>/bin/activate
-Segundo Paso: En el directorio del repo descargado tipear pip install -r requirements.txt
- 
-COSAS DE NTLK QUE HAY QUE INSTALAR (NO LAS INSTALA PIP)
-python -m textblob.download_corpora
+1)Instalar Python:
+    -Windows: descargar del siguiente link: https://www.python.org/downloads/ el instalador de python. verificar que este seleccionada
+la opcion de add python to the path y darle a install now. Para verificar si se instalo correctamente abrir una consola de comando,
+(apretar windows + R), y escribir cmd. Con la consola abierta escribir python --version. Deberia devolver la version instalada.
+    -Linux: abrir un terminal y correr el siguiente comando sudo apt install python3. Verificar la instalacion con python3 --version
+2)(Opcional): instalar virtualenv.
+    1.Correr el siguiente comando en consola: pip install virtualenv
+    2.Correr este comando para crear el entorno virtual: virtualenv <nombre entorno>
+    3.Ubicarse en la carpeta que se creo con este comando donde <ruta del entorno>
+    es la ruta a la carpeta creada con el comando anterior: cd  <ruta del entorno>/bin/activate
+    Nota: Si usas virtualenv, para los pasos de abajo hay que tener el entorno activo. se lo activa con el paso 3 siempre.
+3) Descargar el repositorio. Ir al siguiente link: https://github.com/Luminicen/NLP-Lanto y en el boton
+code darle a download zip. Luego descomprimirlo en algun lado.
+4)Abrir una consola de comandos ubicada en el directorio del repo descargado(cd rutaDirectorioRepo)
+tipear pip install -r requirements.txt. 
+5)COSAS DE NTLK QUE HAY QUE INSTALAR (NO LAS INSTALA PIP)
+En una terminal correr el siguiente commando python -m textblob.download_corpora
