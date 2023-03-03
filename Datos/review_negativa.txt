@@ -1,0 +1,35 @@
+This is a interesting game divided into a few parts, mostly fighting and logistics. If it was just those parts I would give it a 7 since its such a neat idea. Unfortunately it has a third world: building.
+
+The fighting part of the game is okay. The two sides aren't very balanced against each other (green team generally needs to jump through hoops to do what blue can just do alone.) But the imbalances mostly come out in the wash thanks to logistics and uncoordinated players wasting the good stuff.
+
+The logistics side of the game is... functional? As you might imagine its can be tedious but it can be fulfilling and even an interesting little puzzle.
+
+But the score tanking part of the game is the building.
+
+In all the many games I have played I have never encountered a less engaging more tedious implementation of building.
+
+You equip the hammer you spawn with go to a spawn point with basic materials and take 20 at a time 2-3 seconds each into your inventory. You slowly walk over and place a blue print and then hold left click on that blue print transferring 1 basic material into at a rate of 1 every 0.7 seconds (depending on server load) it per hammer hit.
+
+The cheapest building in the game is about 60 materials. It is a mindbogglingly dull task. And unfortunately for you prospective player it isn't optional. You NEED to build to defend territory in this game, the specialist equipment needed to destroy NPC defenses is nearly half the logistics burden of the game. If you won't build and they do they get to have twice as much supply as you do and as you might imagine that means you lose.
+
+The implementation is very glitchy, completely clear and smooth areas are sometimes unbuildable or blocked by invisible backpacks from dead players. Its also you might be able to rebuild a trench connecting two buildings but more often the exact same trench is now unplaceable. Worse only the original builder is able to remove a placed building and only for a few hours. If you screw up you need to use literally hundreds of grenades to remove the incorrectly placed building and start from scratch.
+
+In addition to this buildings need to be supplied with supplies, not like rifles or medicine or any of the kind of supplies that actual players use but abstract supplies or they will take damage until they are destroyed. (Also in an example of the lazy SFX design in the game a building decaying makes the same sound effect as a building destroyed by the enemy lol) These supplies are quite hard to come by since they conflict with more important equipment actual players use so you will have to supply them yourself in most cases.
+
+The most recent patch added player constructed factories called facilities, and these are all the problems related to building amped up even farther. Even more tedious since you can carry only one of the material at a time more buggy and demanding even more of those abstract sups. Unless you are a leader in an existing clan you don't really get to play with these as they literally require someone online for all but 8 hours a day or they will start to decay.
+
+Train tracks also decay in about a day. It was the main feature of the update and its barely used due to the resource requirements.
+
+Beyond the building issues the core game has a lot of issues with polish and tutorials. The game does not even attempt to explain any of the various interfaces required to do in game. Keep in mind the 1.0 release is out and still has misleading tool tips from 2020 in most screens that have tooltips.
+
+Now for the misc problems that could be overlooked when the game was still early access.
+
+The game suffers from serious performance issues whenever you are near large amounts of player placed structures (which is a lot).
+
+UI design is objectively terrible the hundreds of items in the game are represented as tiny light grey on dark grey icons in a semi transparent plane UI. Mods are required to tell the various barely differentiated vehicles and weapons apart from each other at a glance.
+
+The graphics overall are very drab, battle fields very quickly go from green grass to blasted WWI style wastelands. The theming is on point with that. But the fact remains that you as a player will be spending the vast majority of your time looking at a intentionally unpleasant eyesore.
+
+I think most of us expected that these issues would at least have been cleaned up a bit but the 1.0 release has come and gone and the devs have been radio silent since. Presumably they are focusing on the next game since they don't do DLC and they just did an awful launch.
+
+tl;dr; just wait for foxhole 2 they are working on a engine that actually supports this kind of game.
