@@ -100,4 +100,4 @@ print("la siguiente matriz reeprecenta a la etiqueta predecida")
 print(pred)
 labels = ['ham','spam']
 print("salida traducida")
-print(pred, labels[np.argmax(labels_train[np.argmax(pred)])])
+print( labels[np.argmax(labels_train[np.argmax(pred)])])
