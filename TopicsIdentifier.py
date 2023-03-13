@@ -37,28 +37,25 @@ def identificarTopicos(doc_complete) :
     dictionary = corpora.Dictionary(doc_clean)
     #convierto la lista en una matrix doc - termino
     doc_term_matrix = [dictionary.doc2bow(doc) for doc in doc_clean]
-    # Creating the object for LDA model using gensim library
+    # Creo el LDA
     Lda = gensim.models.ldamodel.LdaModel
-    # Running and Training LDA model on the document term matrix
-    #for 3 topics.
+    # Entreno el modelo
+    #Establesco el numero de topicos
     ldamodel = Lda(doc_term_matrix, num_topics=3, id2word =
     dictionary, passes=50)
-    # Results
-    #print(ldamodel.print_topics())
     topicos = ldamodel.show_topics(formatted=False)
+    print("-----------------Topicos encontrados con sus '%' de valoracion y peso en el documento-------------- ")
     print(topicos[0][1])
-    #topicos_ordenados = topicos[0][1].sort(key=lambda a: a[1],reverse=True)
-    #print(topicos_ordenados)
     result = format_topics_sentences(ldamodel,doc_term_matrix)
+    print("----------------- Elije las mas repecentativas, aquellas de mayor numero de valoracion -------------- ")
     print(result)
-    #print(result['Topic_Keywords'][0])
     return result
 doc1 = "I am learning NLP, it is very interesting and exciting. it includes machine learning and deep learning"
 doc2 = "My father is a data scientist and he is nlp expert"
 doc3 = "My sister has good exposure into android development"
 doc_complete = [doc1, doc2, doc3]
 identificarTopicos(doc_complete)
-#ejemplo
+#Ejemplos
 f1 = open('./Datos/Agricultura.txt',"r",encoding='utf-8')
 doc = f1.read()
 f1.close()
