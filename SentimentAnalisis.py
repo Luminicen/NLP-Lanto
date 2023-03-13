@@ -52,9 +52,9 @@ review2_limpio = processRow(review2)
 blob = TextBlob(review_limpio)
 print("REVIEW 1")
 print(blob.sentiment)
-#now lets look at the sentiment of review2
 print("REVIEW 2")
 blob = TextBlob(review2_limpio)
+print("Polaridad: Cuanto mas se acerque a 1 mas positivo es la review, si es 0 es neutral la review y cuanto mas cercana a -1 este mas negativa es la review")
 print(blob.sentiment)
 #cuanto mas se acerque a 1 es mas positiva y cuanto mas se acerque a -1 es negativa
 #ejemplos mas largos

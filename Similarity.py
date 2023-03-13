@@ -12,6 +12,7 @@ tfidf_vectorizer = TfidfVectorizer()
 tfidf_matrix = tfidf_vectorizer.fit_transform(documents)
 #print(tfidf_matrix.shape)
 #hacemos el computo de similaridad
+print("Se compara la palabra con si misma y con el resto. El resultado queda en la posicion de la palabra. Cuanto mayor sea el numero mas parecido es. Si es 1 es porque es igual. Compara el primer valor con el resto!")
 print("EJEMPLO 1")
 print(cosine_similarity(tfidf_matrix[0:1],tfidf_matrix))
 #cuanto mas alto sea el numerito mas similar es.
