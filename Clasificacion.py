@@ -28,7 +28,7 @@ Email_Data = Email_Data.rename(columns={"label":"Target", "text":"Email"})
 Email_Data['Email'] = Email_Data['Email'].apply(lambda x:re.sub('[!@#$:).;,?&]', '', x.lower()))
 Email_Data['Email'] = Email_Data['Email'].apply(lambda x:re.sub(' ', ' ', x))
 print("----------------DATOS--------------------")
-print(Email_Data['Email'].head(5))# <--- descomentar para ver como se compone el .csv
+print(Email_Data['Email'].head(5)) 
 #identifico los datos, las clases = labels
 list_sentences_rawdata = Email_Data["Email"].fillna("_na_").values
 list_classes = ["Target"]
@@ -51,8 +51,6 @@ print('Cantidad encontrada:  %s' % len(word_index))
 train_data = pad_sequences(train_sequences, maxlen=MAX_SEQUENCE_LENGTH)
 # obtenemos las palabras mnas frecuentes para el test
 test_data = pad_sequences(test_sequences, maxlen=MAX_SEQUENCE_LENGTH)
-#print(train_data.shape)
-#print(test_data.shape)
 train_labels = train['Target']
 test_labels = test['Target']
 #convierto los labels de texto a numero
@@ -60,14 +58,12 @@ le = LabelEncoder()
 le.fit(train_labels)
 train_labels = le.transform(train_labels)
 test_labels = le.transform(test_labels)
+print("clases a usar")
 print(le.classes_)
-print(np.unique(train_labels, return_counts=True))
+#print(np.unique(train_labels, return_counts=True))
 #print(np.unique(test_labels, return_counts=True))
 labels_train = to_categorical(np.asarray(train_labels))
 labels_test = to_categorical(np.asarray(test_labels))
-#print('Shape of data tensor:', train_data.shape)
-#print('Shape of label tensor:', labels_train.shape)
-#print('Shape of label tensor:', labels_test.shape)
 EMBEDDING_DIM = 100
 model = Sequential()
 model.add(Embedding(MAX_NB_WORDS,EMBEDDING_DIM,input_length=MAX_SEQUENCE_LENGTH))
@@ -81,6 +77,10 @@ optimizer='adam',metrics = ['accuracy'])
 model.fit(train_data, labels_train,batch_size=16,epochs=5,validation_data=(test_data, labels_test))
 predicted_lstm=model.predict(test_data)
 precision, recall, fscore, support = score(labels_test,predicted_lstm.round())
+print("precision: indica que tan preciso es el modelo. Mide calidad, y la viabilidad de la respuesta")
+print("recall: Nos informa sobre la cantidad de casos que es capas de identificar")
+print("fscore: Convina las medidas de precision y recal en un solo valor. Sirve para comparar rendimiento")
+print("support: Es el numero de occurencias de cada clase acertada ")
 print('precision: {}'.format(precision))
 print('recall: {}'.format(recall))
 print('fscore: {}'.format(fscore))
@@ -96,6 +96,7 @@ def predict_spam(predict_msg):
   return(model.predict(padded))
 pred = predict_spam(predict_msg)
 print("salida")
+print("la siguiente matriz reeprecenta a la etiqueta predecida")
 print(pred)
 labels = ['ham','spam']
 print("salida traducida")
