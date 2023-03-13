@@ -20,7 +20,6 @@ import pandas as pd
 import numpy as np
 import re
 file_content = pd.read_csv('spam.csv', encoding = "ISO-8859-1")
-#limpieza
 stop = stopwords.words('english')
 file_content['text'] = file_content['text'].apply(lambda x: " ".join(x for x in x.split() if x not in stop))
 Email_Data = file_content[['label', 'text']]

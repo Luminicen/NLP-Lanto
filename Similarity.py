@@ -1,5 +1,6 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+# El input se pone en un arreglo o tupla y se lo pasa a tfidf_matrix
 documents = (
 "I like NLP",
 "I am exploring NLP",

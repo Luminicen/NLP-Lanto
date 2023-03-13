@@ -5,7 +5,6 @@ from sklearn.decomposition import PCA
 from matplotlib import pyplot
 model = gensim.models.KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin', binary=True)
 print("SIMILARIDADES")
-print()
 print("Entre 'this' y 'is' ")
 print (model.similarity('this', 'is'))
 data = round(model.similarity('this', 'is') * 100,2)

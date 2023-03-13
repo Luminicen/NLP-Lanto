@@ -1,6 +1,7 @@
 from gensim.models import Word2Vec
 from sklearn.decomposition import PCA
 from matplotlib import pyplot
+# El input se pone en la variable sentence y tiene que separarse las palabras ya que no se una un tokenizer jeje.
 sentences = [['I', 'love', 'nlp'],
  ['I', 'will', 'learn', 'nlp', 'in', '2','months'],
  ['nlp', 'is', 'future'],

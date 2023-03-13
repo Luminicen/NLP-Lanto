@@ -4,6 +4,7 @@ import string
 import gensim
 import pandas as pd
 from gensim import corpora
+# El input debe estar en formato array y se lo deben pasar a la funcion identificarTopicos. Ej identificarTopicos(input)
 def clean(doc,stop,exclude,lemma):
     #limpieza de palabras o caracteres que no suman informacion
     stop_free = " ".join([i for i in doc.lower().split()if i not in stop])

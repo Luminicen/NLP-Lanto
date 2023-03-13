@@ -10,6 +10,8 @@ from textblob import Word
 from textblob import TextBlob
 #from wordcloud import WordCloud, STOPWORDS
 from nltk.tokenize import word_tokenize
+# El input: Se manda el texto como parametro a la funcion de TextBlob. Ej TextBlob(input).
+# Nota: Preprocesar siempre el texto antes de pasarlo como parametro a TextBlob con la funcion processRow.
 review = "I like this phone. screen quality and camera clarity is really good."
 review2 = "This tv is not good. Bad quality, no clarity, worst experience. A piece of trash."
 #limpieza

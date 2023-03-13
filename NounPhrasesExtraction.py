@@ -1,4 +1,5 @@
 from textblob import TextBlob
+# El input se pasa como parametro a la funcion TextBlob. Ej TextBlob(input)
 print("CASO A")
 blob = TextBlob("John is learning natural language processing")
 for np in blob.noun_phrases:

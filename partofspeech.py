@@ -1,5 +1,6 @@
 import spacy
 from spacy import displacy
+# El input se le pasa como parametro al objeto nlp. Ej nlp_ingles(input)
 nlp_ingles = spacy.load("en_core_web_trf")
 print("Ejemplos en ingles")
 texto = "Feature engineering is a process of extracting meaningful information from the raw data to make it usable for machine learning models."
