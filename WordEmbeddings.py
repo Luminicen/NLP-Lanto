@@ -13,6 +13,7 @@ skipgram = Word2Vec(sentences, vector_size =50, window = 3, min_count=1,
 sg = 1)
 #print(skipgram)
 # accedemos al vector
+print("-----------------REPRECENTACION DE LA PALABRA 'NLP' EN EL MODELO ------------------")
 print(skipgram.wv['nlp'])
 skipgram.save('skipgram.bin')
 skipgram = Word2Vec.load('skipgram.bin')
