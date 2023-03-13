@@ -4,8 +4,10 @@ import gensim
 from sklearn.decomposition import PCA
 from matplotlib import pyplot
 model = gensim.models.KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin', binary=True)
+print("SIMILARIDADES")
 print (model.similarity('this', 'is'))
 print (model.similarity('post', 'book'))
-# Finding the odd one out.
+print("NO MATCHEA")
 print(model.doesnt_match('breakfast cereal dinner lunch'.split()))
+print("WOMAN + KING - MAN")
 print(model.most_similar(positive=['woman', 'king'], negative=['man']))
