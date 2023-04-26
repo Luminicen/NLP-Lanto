@@ -95,6 +95,7 @@ BATCH_SIZE = 128
 #entrenamos el modelo
 model.fit(X, Y, epochs=EPOCH, batch_size=BATCH_SIZE, callbacks=callbacks)
 #esto nos  genero unos archivitos que los vamos a cargar para usar. Estos son los weights de la red neuronal
+#va a tirar error la primera vez que se ejecute, pq no va a encontrar el archivo despues anda bien
 file_name = "weights-improvement-05-7.2197.hdf5"
 model.load_weights(file_name)
 model.compile(loss='categorical_crossentropy', optimizer='adam')
