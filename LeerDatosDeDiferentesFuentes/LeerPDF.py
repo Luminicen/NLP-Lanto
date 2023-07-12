@@ -1,3 +1,4 @@
+#pip install PyPDF2
 import PyPDF2
 from PyPDF2 import PdfReader
 #Creating a pdf file object
