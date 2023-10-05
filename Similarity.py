@@ -53,3 +53,29 @@ documentos = [doc,doc2]
 tfidf_vectorizer = TfidfVectorizer()
 tfidf_matrix = tfidf_vectorizer.fit_transform(documentos)
 print(cosine_similarity(tfidf_matrix[0:1],tfidf_matrix))
+#------------------------------JACCARD INDEX-----------------------------------------
+print("-----------JACCARD SIMILARITY--------------")
+# Función para calcular el índice de Jaccard entre dos textos
+def jaccard_index(text1, text2):
+    # Tokeniza los textos en palabras individuales
+    words1 = set(text1.lower().split())
+    words2 = set(text2.lower().split())
+    
+    # Calcula la intersección de los conjuntos de palabras
+    intersection = len(words1.intersection(words2))
+    
+    # Calcula la unión de los conjuntos de palabras
+    union = len(words1.union(words2))
+    
+    # Calcula el índice de Jaccard
+    jaccard = intersection / union if union > 0 else 0.0
+    
+    return jaccard
+
+# Ejemplo de uso, Cuando mas cercano sea a 1 mas similar es
+texto1 = "El rápido zorro marrón"
+texto2 = "El zorro saltó sobre el perro marrón"
+resultado = jaccard_index(texto1, texto2)
+
+print("Índice de Jaccard:", resultado)
+print("Distancia Jaccard:",1-resultado)
