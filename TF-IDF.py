@@ -20,8 +20,18 @@ feature_names = vectorizer.get_feature_names_out()
 tfidf_matrix = vectorizer.transform(Text)
 # Extraer los valores de TF-IDF en una matriz densa
 tfidf_dense = tfidf_matrix.toarray()
-print("-----------------TF---------------------")
-print(tf_matrix.toarray())
+print("-----------------TF DEL PRIMER DOCUMENTO---------------------")
+for i, word in enumerate(feature_names):
+    tf_score = tf_matrix[0, i]  # Muestra los valores de TF para el primer documento
+    print(f"{word}: {tf_score}")
+print("-----------------TF DEL SEGUNDO DOCUMENTO---------------------")
+for i, word in enumerate(feature_names):
+    tf_score = tf_matrix[1, i]  # Muestra los valores de TF para el segundo documento
+    print(f"{word}: {tf_score}")
+print("-----------------TF DEL TERCER DOCUMENTO---------------------")
+for i, word in enumerate(feature_names):
+    tf_score = tf_matrix[2, i]  # Muestra los valores de TF para el tercer documento
+    print(f"{word}: {tf_score}")
 print("-----------------IDF--------------------")
 for word, idf_value in zip(feature_names, vectorizer.idf_):
     print(f'{word}: {idf_value}')
