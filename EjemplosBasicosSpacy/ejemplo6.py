@@ -1,21 +1,20 @@
 import spacy
 from spacy.matcher import Matcher
 
-# Cargar el modelo de spaCy para español
+# Cargar el modelo de spaCy para inglés
 nlp = spacy.load("es_core_news_sm")
 
 # Crear el matcher
 matcher = Matcher(nlp.vocab)
 
-# Imagina un patrón que te gustaría buscar
-# Ejemplo: Patrón para encontrar fechas en formato dd/mm/yyyy
-patron_imaginado = [{"SHAPE": "dd/dd/dddd"}]
+# Definir el patrón con el operador "*"
+patron_sustantivo_adjetivo = [{"POS": "NOUN"}, {"POS": "ADJ", "OP": "*"}]
 
 # Añadir el patrón al matcher
-matcher.add("PATRON_IMAGINADO", [patron_imaginado])
+matcher.add("SUSTANTIVO_ADJETIVO", [patron_sustantivo_adjetivo])
 
-# Texto para analizar
-texto = "El informe del 12/05/2023 muestra un aumento en las ventas. La próxima reunión será el 20/06/2023."
+# Texto de ejemplo
+texto = "El perro rápido corre velozmente por el hermoso parque."
 
 # Procesar el texto con spaCy
 doc = nlp(texto)
@@ -24,6 +23,5 @@ doc = nlp(texto)
 coincidencias = matcher(doc)
 
 # Imprimir los resultados
-print("Coincidencias encontradas:")
 for match_id, start, end in coincidencias:
-    print(f"{matcher.vocab.strings[match_id]}: {doc[start:end].text}")
+    print(f"Caso encontrado: {doc[start:end].text}")
