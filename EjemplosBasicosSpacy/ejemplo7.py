@@ -26,7 +26,9 @@ texto = "Esto es un ejemplo de spaCy."
 doc = nlp(texto)
 coincidencias = matcher(doc)
 
-for _, token_ids in coincidencias:
-    token_a = doc[token_ids[0]]
-    token_b = doc[token_ids[1]]
-    print(f"Encontrado: '{token_a.text}' y '{token_b.text}'")
+for match_id, token_ids in coincidencias:
+    palabra= []
+    for token_id in sorted(token_ids):
+        token = doc[token_id]
+        palabra.append(token.text)
+    print(nlp.vocab.strings[match_id], ' '.join(palabra))
