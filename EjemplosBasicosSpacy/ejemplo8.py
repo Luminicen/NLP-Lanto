@@ -10,7 +10,11 @@ matcher.add("mi_patron", [
             {'RIGHT_ID': 'programa', 'RIGHT_ATTRS': {"LOWER": "programa"}},
             {'LEFT_ID': 'programa', 'REL_OP': '>', 'RIGHT_ID': 'nombre', 'RIGHT_ATTRS':  {"DEP": "nsubj"}},
             {'LEFT_ID': 'programa', 'REL_OP': '>', 'RIGHT_ID': 'de_que', 'RIGHT_ATTRS': {"DEP": "nmod"}} ,
-            {'LEFT_ID': 'de_que', 'REL_OP': '>', 'RIGHT_ID': 'elem', 'RIGHT_ATTRS': {"DEP": "nmod"}} 
+            {'LEFT_ID': 'de_que', 'REL_OP': '>', 'RIGHT_ID': 'elem', 'RIGHT_ATTRS': {"DEP": "nmod"}} ,
+            {'LEFT_ID': 'elem', 'REL_OP': '>', 'RIGHT_ID': 'control', 'RIGHT_ATTRS': {"DEP": "amod"}} ,
+            {'LEFT_ID': 'control', 'REL_OP': '>', 'RIGHT_ID': 'controlobj', 'RIGHT_ATTRS': {"DEP": "obj"}} ,
+            {'LEFT_ID': 'controlobj', 'REL_OP': '>', 'RIGHT_ID': 'rem', 'RIGHT_ATTRS': {"DEP": "amod"}} ,
+           
 
         ]
 ])
