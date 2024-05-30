@@ -1,0 +1,159 @@
+[
+    {
+        "id": 1,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "La Torre Eiffel mide 324 metros de alto.",
+                        "entities": [
+                            {"start": 3, "end": 15, "label": "BUILDING"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "La Gran Muralla China es muy larga.",
+                        "entities": [
+                            {"start": 3, "end": 20, "label": "BUILDING"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "El Coliseo es un antiguo anfiteatro en Roma.",
+                        "entities": [
+                            {"start": 3, "end": 11, "label": "BUILDING"},
+                            {"start": 32, "end": 36, "label": "GPE"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "La Estatua de la Libertad está en Nueva York.",
+                        "entities": [
+                            {"start": 3, "end": 24, "label": "BUILDING"},
+                            {"start": 39, "end": 50, "label": "GPE"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "La Sagrada Familia es una basílica en Barcelona.",
+                        "entities": [
+                            {"start": 3, "end": 20, "label": "BUILDING"},
+                            {"start": 39, "end": 48, "label": "GPE"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "La Torre de Pisa es conocida por su inclinación.",
+                        "entities": [
+                            {"start": 3, "end": 18, "label": "BUILDING"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "La Ópera de Sídney es un famoso edificio en Australia.",
+                        "entities": [
+                            {"start": 3, "end": 19, "label": "BUILDING"},
+                            {"start": 48, "end": 57, "label": "GPE"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "La Torre CN es un rascacielos en Toronto.",
+                        "entities": [
+                            {"start": 3, "end": 10, "label": "BUILDING"},
+                            {"start": 29, "end": 36, "label": "GPE"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "El Taj Mahal es un mausoleo en la India.",
+                        "entities": [
+                            {"start": 3, "end": 12, "label": "BUILDING"},
+                            {"start": 33, "end": 38, "label": "GPE"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "El Palacio de Buckingham es la residencia oficial de la Reina en Londres.",
+                        "entities": [
+                            {"start": 3, "end": 24, "label": "BUILDING"},
+                            {"start": 67, "end": 74, "label": "GPE"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

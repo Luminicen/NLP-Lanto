@@ -1,0 +1,159 @@
+[
+    {
+        "id": 21,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "La Torre Eiffel es uno de los monumentos más famosos de París.",
+                        "entities": [
+                            {"start": 3, "end": 15, "label": "BUILDING"},
+                            {"start": 55, "end": 60, "label": "GPE"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "El Coliseo es un antiguo anfiteatro en Roma.",
+                        "entities": [
+                            {"start": 3, "end": 11, "label": "BUILDING"},
+                            {"start": 37, "end": 41, "label": "GPE"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "La Mezquita Sheikh Zayed es una de las mezquitas más grandes del mundo.",
+                        "entities": [
+                            {"start": 3, "end": 29, "label": "BUILDING"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "La Basílica de San Pedro es una de las iglesias más grandes del mundo.",
+                        "entities": [
+                            {"start": 3, "end": 26, "label": "BUILDING"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "El Taj Mahal es un mausoleo en la ciudad de Agra, India.",
+                        "entities": [
+                            {"start": 3, "end": 12, "label": "BUILDING"},
+                            {"start": 54, "end": 59, "label": "GPE"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "La Catedral de Notre-Dame es una famosa iglesia gótica en París.",
+                        "entities": [
+                            {"start": 3, "end": 27, "label": "BUILDING"},
+                            {"start": 59, "end": 64, "label": "GPE"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "La Gran Muralla China es una antigua fortificación en China.",
+                        "entities": [
+                            {"start": 3, "end": 23, "label": "BUILDING"},
+                            {"start": 47, "end": 52, "label": "GPE"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "La Ópera de Sídney es uno de los edificios más famosos de Australia.",
+                        "entities": [
+                            {"start": 3, "end": 18, "label": "BUILDING"},
+                            {"start": 50, "end": 59, "label": "GPE"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "El Castillo de Neuschwanstein es un palacio en Baviera, Alemania.",
+                        "entities": [
+                            {"start": 3, "end": 24, "label": "BUILDING"},
+                            {"start": 56, "end": 64, "label": "GPE"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "paragraphs": [
+            {
+                "sentences": [
+                    {
+                        "text": "La Estatua de Cristo Redentor es una de las nuevas siete maravillas del mundo.",
+                        "entities": [
+                            {"start": 3, "end": 31, "label": "BUILDING"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
