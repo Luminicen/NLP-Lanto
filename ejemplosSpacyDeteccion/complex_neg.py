@@ -22,7 +22,7 @@ oraciones = [
     "No creo que no venga.",
     "No es raro no sentirse bien en esta situación.",
     "Nunca nadie me dijo nada.",
-    "No me gusta el café.",
+    "No diría que no estuvo mal",
     "No tengo nada que decir."
 ]
 
