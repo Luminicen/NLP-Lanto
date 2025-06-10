@@ -2,25 +2,33 @@ import spacy
 
 nlp = spacy.load("es_core_news_sm")
 
-negaciones = {"no", "nunca", "jamás", "nadie", "ninguno", "nada", "ni"}
+def detectar_fraseo_negativo_complejo_por_pos(oracion):
+    doc = nlp(oracion)
+    negaciones = []
 
-def detectar_fraseo_negativo_complejo(oracion):
-    doc = nlp(oracion.lower())
-    neg_count = sum(1 for token in doc if token.text in negaciones)
-    
-    if neg_count > 1:
-        return True, [token.text for token in doc if token.text in negaciones]
-    return False, []
+    for token in doc:
+        # Detectamos palabras de negación como adverbios (ADV) y pronombres indefinidos negativos
+        if token.pos_ in {"ADV", "PRON", "DET"} and token.dep_ == "neg":
+            negaciones.append(token.text)
+        
+        # También podemos considerar adverbios de negación frecuentes por POS
+        if token.pos_ == "ADV" and token.lemma_ in {"no", "nunca", "jamás"}:
+            negaciones.append(token.text)
+
+    return negaciones if len(negaciones) > 1 else []
 
 # Ejemplos
 oraciones = [
     "No creo que no venga.",
     "No es raro no sentirse bien en esta situación.",
-    "No diría que no estuvo mal.",
     "Nunca nadie me dijo nada.",
-    "No me gusta el café."
+    "No me gusta el café.",
+    "No tengo nada que decir."
 ]
 
 for oracion in oraciones:
-    complejo, negs = detectar_fraseo_negativo_complejo(oracion)
-    print(f"'{oracion}' → {'⚠️ Complejo' if complejo else '✔️ Claro'} | Negaciones: {negs}")
+    resultado = detectar_fraseo_negativo_complejo_por_pos(oracion)
+    if resultado:
+        print(f"⚠️ Complejo → '{oracion}' | Negaciones detectadas: {resultado}")
+    else:
+        print(f"✔️ Claro → '{oracion}'")
